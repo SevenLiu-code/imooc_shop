@@ -14,8 +14,8 @@ function buidRandomString($type = 1, $length = 4){
         $chars = join("", array_merge(range("a", "z"), range("A", "Z"), range(0, 9)));
     }
     if ($length>strlen($chars)) {
-        exit("×Ö·û´®³¤¶È²»¹»");
+        exit("å­—ç¬¦ä¸²é•¿åº¦ä¸å¤Ÿ");
     }
-    $chars = str_shuffle($chars);//´òÂÒÊı×é
+    $chars = str_shuffle($chars);//æ‰“ä¹±æ•°ç»„
     return substr($chars, 0, $length);
 }

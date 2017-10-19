@@ -7,14 +7,14 @@
  */
 require_once 'string.func.php';
 function verifyImage($type = 1, $length = 4, $pixel = 0, $sess_name = 'verify'){
-    //Í¨¹ıGD¿â×öÑéÖ¤Âë
-    //´´½¨»­²¼
+    //é€šè¿‡GDåº“åšéªŒè¯ç 
+    //åˆ›å»ºç”»å¸ƒ
     $width = 80;
     $height = 28;
     $image = imagecreatetruecolor($width, $height);
-    $white = imagecolorallocate($image,255,255,255); //ÎªÒ»·ùÍ¼Ïñ·ÖÅäÑÕÉ«
+    $white = imagecolorallocate($image,255,255,255); //ä¸ºä¸€å¹…å›¾åƒåˆ†é…é¢œè‰²
     $black = imagecolorallocate($image, 0,0,0);
-    //ÓÃÌî³ä¾ØĞÎÌî³ä»­²¼
+    //ç”¨å¡«å……çŸ©å½¢å¡«å……ç”»å¸ƒ
     imagefilledrectangle($image, 1,1, $width-2,$height-2, $white);
     $chars = buidRandomString($type, $length);
     $_SESSION[$sess_name] = $chars;
